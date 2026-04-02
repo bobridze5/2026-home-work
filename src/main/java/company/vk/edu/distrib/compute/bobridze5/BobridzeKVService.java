@@ -28,7 +28,7 @@ public class BobridzeKVService implements KVService {
         initContext();
     }
 
-    public void initContext() {
+    private void initContext() {
         server.createContext("/v0/status", new StatusHandler());
         server.createContext("/v0/entity", new EntityHandler(dao));
     }
