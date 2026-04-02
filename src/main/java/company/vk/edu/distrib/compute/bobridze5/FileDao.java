@@ -19,7 +19,6 @@ public class FileDao implements Dao<byte[]> {
         }
     }
 
-
     @Override
     public byte[] get(String key) throws NoSuchElementException, IllegalArgumentException, IOException {
         Path filePath = getPath(key);
@@ -42,7 +41,7 @@ public class FileDao implements Dao<byte[]> {
 
     @Override
     public void close() {
-
+        // No resources to close
     }
 
     private Path getPath(String key) {
